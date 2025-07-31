@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   neo4j:
     image: docker.io/neo4j:latest
@@ -17,21 +15,33 @@ services:
     environment:
       NEO4J_AUTH: "neo4j/${NEO4J_PASSWD}"
       NEO4J_ACCEPT_LICENSE_AGREEMENT: "yes"
-      NEO4J_PLUGINS: '["apoc"]'
-      
+      # plugins:
+      # https://neo4j.com/docs/operations-manual/current/docker/plugins/
+      NEO4J_PLUGINS: '["graph-data-science", "apoc-extended"]'
+      # writing docker configurations for neo4j:
+      # https://development.neo4j.dev/docs/operations-manual/current/docker/configuration/
+
+      # apoc configurations:
+      # https://neo4j.com/docs/apoc/current/config/      
       NEO4J_apoc_export_file_enabled: "true"
       NEO4J_apoc_import_file_enabled: "true"
       NEO4J_apoc_import_file__use__neo4j__config: "false"
-     
+
+      # all configurations: 
+      # https://neo4j.com/docs/operations-manual/current/configuration/configuration-settings/
       NEO4J_server_default__listen__address: "0.0.0.0"
       NEO4J_server_http_listen__address: "0.0.0.0:7474"
       NEO4J_server_bolt_listen__address: "0.0.0.0:7687"
       NEO4J_server_directories_import: "import"
       NEO4J_server_config_strict__validation_enabled: "false"
       NEO4J_initial_dbms_default__database: "neo4j"
-      NEO4J_dbms_security_procedures_unrestricted: "apoc.*"
+      # comma separated unrestriction
+      # https://neo4j.com/docs/operations-manual/current/security/securing-extensions/
+      NEO4J_dbms_security_procedures_unrestricted: "apoc.*,gds.*"
       NEO4J_dbms_security_allow__csv__import__from__file__urls: "true"
-    
+
+      # memory recommendations:
+      # https://neo4j.com/docs/operations-manual/current/configuration/neo4j-admin-memrec/    
       NEO4J_server_memory_heap_initial__size: "31G"
       NEO4J_server_memory_heap_max__size: "31G"
       NEO4J_server_memory_pagecache_size: "128G"
