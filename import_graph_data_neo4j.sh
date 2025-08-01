@@ -13,6 +13,8 @@ cd neo4j/import/ || exit 1
 # Extract header and ruf edges
 (head -n1 edges.csv; grep ",ruf$" edges.csv) > ruf_edges.csv
 
+rm -f edges.csv
+
 echo "Data prepared for Neo4j import."
 
 cd - || exit 1
