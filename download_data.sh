@@ -4,11 +4,11 @@ bucket_name="luvizottocesarg-tmp"
 alias_name="tmp_rw"
 
 declare -a remote_files=(
-    # for RQ1
-    "oi-warehouse/aggregation/what=rua_addresses/"
-    "oi-warehouse/aggregation/what=ruf_addresses/"
-    "oi-warehouse/aggregation/what=graph_edges/"
-    "oi-warehouse/aggregation/what=graph_vertices/"
+    #"oi-warehouse/aggregation/what=rua_addresses/"
+    #"oi-warehouse/aggregation/what=ruf_addresses/"
+    #"oi-warehouse/aggregation/what=graph_edges/"
+    #"oi-warehouse/aggregation/what=graph_vertices/"
+    "oi-warehouse/testing/source=tranco/cctld_dmarc/"
 )
 
 for file in "${remote_files[@]}"; do
