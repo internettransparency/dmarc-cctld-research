@@ -1,6 +1,8 @@
 #!/bin/bash
 
-echo "id" > neo4j/import/vertices.csv
+rm -rf neo4j/import/*
+
+echo "id,is_gov" > neo4j/import/vertices.csv
 echo "src,dst,edge_type" > neo4j/import/edges.csv
 
 cat data/oi-warehouse/aggregation/what=graph_vertices/source=tranco/year=2025/month=07/day=11/*.csv >> neo4j/import/vertices.csv
