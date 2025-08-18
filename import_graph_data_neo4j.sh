@@ -9,13 +9,14 @@ cat data/oi-warehouse/aggregation/what=graph_vertices/source=tranco/year=2025/mo
 cat data/oi-warehouse/aggregation/what=graph_edges/source=tranco/year=2025/month=07/day=11/*.csv >> neo4j/import/edges.csv
 
 cd neo4j/import/ || exit 1
+# no need to separate files...
 # Extract header and rua edges
-(head -n1 edges.csv; grep ",rua$" edges.csv) > rua_edges.csv
+#(head -n1 edges.csv; grep ",rua$" edges.csv) > rua_edges.csv
 
 # Extract header and ruf edges
-(head -n1 edges.csv; grep ",ruf$" edges.csv) > ruf_edges.csv
+#(head -n1 edges.csv; grep ",ruf$" edges.csv) > ruf_edges.csv
 
-rm -f edges.csv
+#rm -f edges.csv
 
 echo "Data prepared for Neo4j import."
 
