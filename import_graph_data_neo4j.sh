@@ -1,12 +1,14 @@
 #!/bin/bash
 
+# OBSOLETE! RUN THE PYTHON SCRIPT INSTEAD!
+
 rm -rf neo4j/import/*
 
 echo "id,is_gov" > neo4j/import/vertices.csv
 echo "src,dst,edge_type" > neo4j/import/edges.csv
 
-cat data/oi-warehouse/aggregation/what=graph_vertices/source=tranco/year=2025/month=07/day=11/*.csv >> neo4j/import/vertices.csv
-cat data/oi-warehouse/aggregation/what=graph_edges/source=tranco/year=2025/month=07/day=11/*.csv >> neo4j/import/edges.csv
+cat data/oi-warehouse/testing/aggregation/what=graph_vertices/source=tranco/year=2025/month=07/day=11/*.csv >> neo4j/import/vertices.csv
+cat data/oi-warehouse/testing/aggregation/what=graph_edges/source=tranco/year=2025/month=07/day=11/*.csv >> neo4j/import/edges.csv
 
 cd neo4j/import/ || exit 1
 # no need to separate files...

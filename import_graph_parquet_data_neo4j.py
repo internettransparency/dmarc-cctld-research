@@ -6,7 +6,7 @@ def main():
     # Load the Parquet files
     start_date = datetime(2025, 7, 11)
     what = "graph_vertices"
-    parquet_data_path = "data/oi-warehouse/aggregation/what={what}/source=tranco/year={start_date.year}/month={start_date.month:02d}/day={start_date.day:02d}/"
+    parquet_data_path = "data/oi-warehouse/testing/aggregation/what={what}/source=tranco/year={start_date.year}/month={start_date.month:02d}/day={start_date.day:02d}/"
     print(parquet_data_path.format(what=what, start_date=start_date))
     vertices_pdf = pd.read_parquet(parquet_data_path.format(what=what, start_date=start_date))
     what = "graph_edges"

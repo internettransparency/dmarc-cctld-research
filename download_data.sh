@@ -4,8 +4,8 @@ bucket_name="luvizottocesarg-tmp"
 alias_name="tmp_rw"
 
 declare -a remote_files=(
-    "oi-warehouse/aggregation/what=graph_edges/"
-    "oi-warehouse/aggregation/what=graph_vertices/"
+    "oi-warehouse/testing/aggregation/what=graph_edges/"
+    "oi-warehouse/testing/aggregation/what=graph_vertices/"
     "oi-warehouse/testing/source=tranco/cctld_dmarc/"
 )
 
