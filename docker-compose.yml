@@ -2,6 +2,7 @@ services:
   neo4j:
     image: docker.io/neo4j:latest
     container_name: neo4j
+    userns_mode: keep-id
     ports:
       - "7474:7474"  # HTTP
       - "7687:7687"  # Bolt
