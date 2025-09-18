@@ -1,3 +1,4 @@
+.DS_Store
 /.env
 /data/*
 /neo4j/plugins/*.jar
