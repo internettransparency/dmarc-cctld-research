@@ -42,7 +42,7 @@ func headerMatches(h string, candidates []string) bool {
 func main() {
 	defaultURL := "https://publicadministration.un.org/egovkb/en-us/Resources/Country-URLs"
 	pageURL := flag.String("url", defaultURL, "URL of the UN EGOVKB Country-URLs page")
-	userAgent := flag.String("ua", "Mozilla/5.0 (compatible; egovkb-scraper/1.1; +https://example.invalid)", "HTTP User-Agent")
+	userAgent := flag.String("ua", "Mozilla/5.0", "User-Agent")
 	retries := flag.Int("retries", 4, "Number of fetch retries on transient errors")
 	flag.Parse()
 
@@ -277,23 +277,32 @@ func extractFirstURL(td *goquery.Selection, base *url.URL) string {
 
 func extractAllURLs(td *goquery.Selection, base *url.URL) []string {
 	var out []string
-	td.Find("a[href]").Each(func(_ int, a *goquery.Selection) {
-		href, ok := a.Attr("href")
-		if !ok {
-			return
+	lines := strings.Split(td.Text(), "\n")
+	for _, line := range lines {
+		line = strings.TrimSpace(line)
+		if line != "" {
+			out = append(out, line)
 		}
-		h := strings.TrimSpace(href)
-		if h == "" {
-			return
-		}
-		u, err := base.Parse(h)
-		if err != nil {
-			return
-		}
-		if u.Scheme == "http" || u.Scheme == "https" {
-			out = append(out, u.String())
-		}
-	})
+	}
+
+	// td.Find("a[href]").Each(func(_ int, a *goquery.Selection) {
+	// 	href, ok := a.Attr("href")
+	// 	if !ok {
+	// 		return
+	// 	}
+	// 	h := strings.TrimSpace(href)
+	// 	if h == "" {
+	// 		return
+	// 	}
+	// 	u, err := base.Parse(h)
+	// 	if err != nil {
+	// 		return
+	// 	}
+	// 	if u.Scheme == "http" || u.Scheme == "https" {
+	// 		//out = append(out, u.String())
+	// 		out = append(out, h)
+	// 	}
+	// })
 	// de-dup, preserve order
 	seen := map[string]struct{}{}
 	dedup := make([]string, 0, len(out))

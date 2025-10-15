@@ -31,7 +31,7 @@ Cambodia,http://www.cdc-crdb.gov.kh,
 Cameroon,http://www.spm.gov.cm,
 Canada,http://www.canada.gc.ca,http://open.canada.ca
 Cabo Verde,https://www.governo.cv,https://portondinosilhas.gov.cv
-Central African Republic,https://publicadministration.un.org/egovkb/en-us/Resources/www.governo.cv,
+Central African Republic,http://primature.govcf.org,
 Chad,http://www.gouvernement.td,
 Chile,http://www.gob.cl,http://www.gobiernoabierto.gob.cl/;http://www.gobiernotransparentechile.cl/
 China,http://www.gov.cn,
@@ -51,7 +51,7 @@ Djibouti,http://www.presidence.dj,
 Dominica,http://www.dominica.gov.dm,http://dominode.dm/
 Dominican Republic,http://dominicana.gob.do,http://datos.gob.do/
 Ecuador,http://www.presidencia.gob.ec,
-Egypt,https://publicadministration.un.org/egovkb/en-us/Resources/www.egypt.gov.org,
+Egypt,www.egypt.gov.org,
 El Salvador,https://www.asamblea.gob.sv,http://www.gobiernoabierto.gob.sv/
 Equatorial Guinea,http://www.guineaecuatorialpress.com,
 Eritrea,http://www.shabait.com,
@@ -75,7 +75,7 @@ Guyana,http://gina.gov.gy,
 Haiti,http://primature.gouv.ht,
 Honduras,http://www.presidencia.gob.hn/,
 Hungary,http://www.magyarorszag.hu,
-Iceland,https://publicadministration.un.org/egovkb/en-us/Resources/www.government.is,
+Iceland,www.government.is,
 India,https://india.gov.in,https://data.gov.in/
 Indonesia,http://indonesia.go.id,http://data.go.id/
 Iran (Islamic Republic of),https://iran.gov.ir/,
@@ -134,7 +134,7 @@ Papua New Guinea,http://www.pm.gov.pg,http://www.parliament.gov.pg/
 Paraguay,https://www.paraguay.gov.py,
 Peru,http://www.peru.gob.pe,http://www.serviciosalciudadano.gob.pe/
 Philippines,http://www.gov.ph,http://data.gov.ph/
-Poland,https://www.gov.pl,https://danepubliczne.gov.pl
+Poland,https://www.gov.pl/,https://danepubliczne.gov.pl
 Portugal,http://www.portugal.gov.pt,http://www.dados.gov.pt/
 Qatar,http://portal.www.gov.qa,
 Republic of Korea,https://www.gov.kr,https://www.data.go.kr/
@@ -180,7 +180,7 @@ Turkmenistan,http://www.turkmenistan.gov.tm,
 Tuvalu,http://www.tuvaluislands.com,
 Uganda,http://www.gou.go.ug,
 Ukraine,http://www.kmu.gov.ua/,http://data.gov.ua/
-United Arab Emirates,https://eur02.safelinks.protection.outlook.com/?url=https%3A%2F%2Fu.ae%2F&data=05%7C01%7Carchie.kariuki%40un.org%7C7ad2d421733d43e8a48008dbdf9ce6a9%7C0f9e35db544f4f60bdcc5ea416e6dc70%7C0%7C0%7C638349637210358190%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=1MZKnZYXX5XYf%2FLpi3rSlKVZ3wEe0g%2FdGgGH9z2flPs%3D&reserved=0,https://bayanat.ae/
+United Arab Emirates,https://u.ae/,https://bayanat.ae
 United Kingdom of Great Britain and Northern Ireland,https://www.gov.uk,https://data.gov.uk/
 United Republic of Tanzania,http://www.tanzania.go.tz/,http://www.opendata.go.tz/
 United States of America,https://www.usa.gov,https://www.data.gov/

@@ -6,8 +6,8 @@ alias_name="tmp_rw"
 declare -a remote_files=(
     "oi-warehouse/testing/aggregation/what=graph_edges/"
     "oi-warehouse/testing/aggregation/what=graph_vertices/"
-    "oi-warehouse/testing/source=tranco/cctld_dmarc/"
-    "oi-warehouse/testing/source=tranco/tld_all_domains/"
+    "oi-warehouse/source=ct_logs/cctld_dmarc/"
+    "oi-warehouse/source=ct_logs/tld_all_domains/"
 )
 
 for file in "${remote_files[@]}"; do

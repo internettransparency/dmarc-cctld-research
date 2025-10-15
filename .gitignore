@@ -7,3 +7,5 @@
 /neo4j/import/
 /venv/
 /.vscode/
+!/data/cctlds_country.csv
+!/data/longitudinal_*.csv
