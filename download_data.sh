@@ -7,7 +7,7 @@ declare -a remote_files=(
     "oi-warehouse/testing/aggregation/what=graph_edges/"
     "oi-warehouse/testing/aggregation/what=graph_vertices/"
     "oi-warehouse/source=ct_logs/cctld_dmarc/"
-    "oi-warehouse/source=ct_logs/tld_all_domains/"
+    "oi-warehouse/source=ct_logs/countries_counts/"
 )
 
 for file in "${remote_files[@]}"; do
