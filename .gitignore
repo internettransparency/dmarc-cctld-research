@@ -9,3 +9,5 @@
 /.vscode/
 !/data/cctlds_country.csv
 !/data/longitudinal_*.csv
+!/data/company_dmarc_adoption.csv
+!/data/country_dmarc_adoption.csv
