@@ -4,8 +4,8 @@ bucket_name="luvizottocesarg-tmp"
 alias_name="tmp_rw"
 
 declare -a remote_files=(
-    "oi-warehouse/aggregation/what=graph_edges/"
-    "oi-warehouse/aggregation/what=graph_vertices/"
+    "oi-warehouse/source=ct_logs/graph_edges/"
+    "oi-warehouse/source=ct_logs/graph_vertices/"
     "oi-warehouse/source=ct_logs/cctld_dmarc/"
     "oi-warehouse/source=ct_logs/countries_counts/"
 )
@@ -18,3 +18,4 @@ for file in "${remote_files[@]}"; do
     mkdir -p "data/${file}${directory}"
     mc cp --recursive --no-color --dp "${alias_name}/${bucket_name}/${file}" "data/${file}"
 done
+

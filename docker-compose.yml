@@ -51,4 +51,8 @@ services:
 
       AWS_ACCESS_KEY_ID: "${AWS_ACCESS_KEY_ID}"
       AWS_SECRET_ACCESS_KEY: "${AWS_SECRET_ACCESS_KEY}"
+
+      # for offline batch import:
+      NEO4J_ADMIN_JAVA_OPTS: "--add-opens=java.base/java.nio=ALL-UNNAMED"
+      NEO4J_server_jvm_additional: "-XX:+ExitOnOutOfMemoryError --add-opens=java.base/java.nio=ALL-UNNAMED"
     restart: always

@@ -4,14 +4,15 @@ import pandas as pd
 
 def main():
     # Load the Parquet files
-    start_date = datetime(2025, 7, 11)
+    start_date = datetime(2025, 10, 9)
     what = "graph_vertices"
-    parquet_data_path = "data/oi-warehouse/testing/aggregation/what={what}/source=tranco/year={start_date.year}/month={start_date.month:02d}/day={start_date.day:02d}/"
-    print(parquet_data_path.format(what=what, start_date=start_date))
-    vertices_pdf = pd.read_parquet(parquet_data_path.format(what=what, start_date=start_date))
+    source = "ct_logs"
+    parquet_data_path = "data/oi-warehouse/source={source}/{what}/year={start_date.year}/month={start_date.month:02d}/day={start_date.day:02d}/"
+    print(parquet_data_path.format(what=what, source=source, start_date=start_date))
+    vertices_pdf = pd.read_parquet(parquet_data_path.format(what=what, source=source, start_date=start_date))
     what = "graph_edges"
-    print(parquet_data_path.format(what=what, start_date=start_date))
-    edges_pdf = pd.read_parquet(parquet_data_path.format(what=what, start_date=start_date))
+    print(parquet_data_path.format(what=what, source=source, start_date=start_date))
+    edges_pdf = pd.read_parquet(parquet_data_path.format(what=what, source=source, start_date=start_date))
 
     # Save the DataFrames as CSV files
     vertices_pdf.to_csv("neo4j/import/vertices.csv", index=False)
