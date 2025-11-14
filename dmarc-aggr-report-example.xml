@@ -1,0 +1,49 @@
+<?xml version=”1.0″ encoding=”UTF-8″ ?>
+<!-- example extracted from https://www.mailercheck.com/articles/how-to-read-a-dmarc-report-and-actually-understand-it -->
+<feedback>
+  <report_metadata>
+    <org_name>google.com</org_name>
+    <email>noreply-dmarc-support@google.com</email>
+    <extra_contact_info>
+    http://google.com/dmarc/support
+    </extra_contact_info>
+    <report_id>7598769364592857643</report_id>
+    <date_range>
+      <begin>1632654984</begin>
+      <end>1633749852</end>
+    </date_range>
+  </report_metadata>
+  <policy_published>
+    <domain>yourdomain.com</domain>
+    <adkim>r</adkim>
+    <aspf>r</aspf>
+    <p>none</p>
+    <sp>none</sp>
+    <pct>100</pct>
+  </policy_published>
+  <record>
+    <row>
+      <source_ip>192.158.1.38</source_ip>
+      <count>2</count>
+      <policy_evaluated>
+        <disposition>none</disposition>
+        <dkim>fail</dkim>
+        <spf>pass</spf>
+      </policy_evaluated>
+    </row>
+    <identifiers>
+      <header_from>yourdomain.com</header_from>
+    </identifiers>
+    <auth_results>
+      <dkim>
+        <domain>yourdomain.com</domain>
+        <result>fail</result>
+        <human_result></human_result>
+      </dkim>
+      <spf>
+        <domain>yourdomain.com</domain>
+        <result>pass</result>
+      </spf>
+    </auth_results>
+  </record>
+</feedback>
