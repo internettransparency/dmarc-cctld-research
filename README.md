@@ -4,7 +4,6 @@ Welcome to the software artifacts of the aforementioned paper. This repository p
 
 Paper presented at [NOMS 2026](https://noms2026.ieee-noms.org/ieeeifip-network-operations-and-management-symposium-2026-121/events/ts-4-security-management).
 Paper can be accessed [here](https://gustavoluvizotto.github.io/dmarc-aggr-report-dependency-tex/main.pdf).
-[NOMS 2026](https://ieeexplore.ieee.org/xpl/conhome/1000491/all-proceedings) are not out yet.
 
 ## Description
 
